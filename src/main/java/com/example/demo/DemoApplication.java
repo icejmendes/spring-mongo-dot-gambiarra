@@ -18,14 +18,11 @@ public class DemoApplication {
     AppRepository appRepository;
 
     @PostMapping("/save")
-    public void save(@RequestBody Map<String, Object> request) {
+    public AppModel save(@RequestBody Map<String, Object> request) {
         Map<String, Object> data = (Map<String, Object>) request.get("data");
 
         var response = retainFieldsFromRequest(data);
-        var saved = appRepository.save(AppModel.createAppModel(response));
-
-//        System.out.println(response.toString());
-//        System.out.println(saved.toString());
+        return appRepository.save(AppModel.createAppModel(response));
     }
 
     private List<Map<String, Object>> extracData(Map<String, Object> request) {

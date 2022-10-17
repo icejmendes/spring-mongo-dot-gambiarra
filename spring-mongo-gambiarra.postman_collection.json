@@ -1,0 +1,36 @@
+{
+	"info": {
+		"_postman_id": "1d66b8a4-bfce-40b0-bff1-004a712b568f",
+		"name": "spring-mongo-gambiarra",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "gambiarra-paga",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"banco.agencia\": \"Agencia PG-123\",\n        \"banco.conta\": \"CC-9874564\",\n        \"banco.endereco\": \"RUA X, N15\",\n        \"cliente.nome\": \"Bruno\",\n        \"cliente.idade\": \"25\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/save",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"save"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
